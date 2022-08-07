@@ -67,3 +67,27 @@ label {
     left: 328px;
     cursor: pointer;
 }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 30px 0;
+}
+
+.tr {
+    background: rgb(241, 241, 241);
+    height: 34px;
+}
+
+.trHeader {
+    height: 39px;
+}
+
+.th {
+    border-bottom: solid black 1px;
+    font-weight: normal;
+}
+
+.thHeader {
+    border-bottom: solid black 1px;
+}

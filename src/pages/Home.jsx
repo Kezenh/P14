@@ -1,14 +1,31 @@
 import Form from "../components/Form"
 import { Link } from "react-router-dom"
 import Modal from "../components/Modal"
+import { useDispatch } from "react-redux"
+import { addEmployee } from "./../redux/store"
 
 function Home() {
+
+    const dispatch = useDispatch()
 
     function openModal() {
         document.getElementById("modalMask").style.display = "flex"
     }
 
     function saveEmployee() {
+
+        const employee = {
+            firstName: document.getElementById("first-name").value,
+            lastName: document.getElementById("last-name").value,
+            startDate: document.getElementById("start-date").value,
+            department: document.getElementById("department").value,
+            dateOfBirth: document.getElementById("date-of-birth").value,
+            street: document.getElementById("street").value,
+            city: document.getElementById("city").value,
+            state: document.getElementById("state").value,
+            zipCode: document.getElementById("zip-code").value
+        }
+        dispatch(addEmployee(employee))
         openModal()
     }
 
