@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import Table from "../components/Table"
+import React from 'react'
 
 function EmployeeList() {
 

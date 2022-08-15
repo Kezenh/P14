@@ -1,5 +1,6 @@
 import states from "../constants/states"
 import LabelInput from "./LabelInput"
+import React from 'react'
 
 function Form() {
 

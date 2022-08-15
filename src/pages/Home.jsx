@@ -1,16 +1,13 @@
 import Form from "../components/Form"
 import { Link } from "react-router-dom"
-import Modal from "kezenh-modal-package"
+import { Modal, openModal } from "kezenh-modal-package"
 import { useDispatch } from "react-redux"
 import { addEmployee } from "./../redux/store"
+import React from 'react'
 
 function Home() {
 
     const dispatch = useDispatch()
-
-    function openModal() {
-        document.getElementById("modalMask").style.display = "flex"
-    }
 
     function saveEmployee() {
 

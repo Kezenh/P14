@@ -1,3 +1,5 @@
+import React from 'react'
+
 function LabelInput({ htmlFor, text, type, id }) {
     return (
         <>
