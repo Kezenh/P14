@@ -1,30 +1,18 @@
 import states from "../constants/states"
+import LabelInput from "./LabelInput"
 
 function Form() {
 
     return (
         <form action="#" id="create-employee">
-            <label htmlFor="first-name">First Name</label>
-            <input type="text" id="first-name" />
-
-            <label htmlFor="last-name">Last Name</label>
-            <input type="text" id="last-name" />
-
-            <label htmlFor="date-of-birth">Date of Birth</label>
-            <input id="date-of-birth" type="date" />
-
-            <label htmlFor="start-date">Start Date</label>
-            <input id="start-date" type="date" />
-
+            <LabelInput htmlFor="first-name" text="First Name" type="text" id="first-name" />
+            <LabelInput htmlFor="last-name" text="Last Name" type="text" id="last-name" />
+            <LabelInput htmlFor="date-of-birth" text="Date of Birth" type="date" id="date-of-birth" />
+            <LabelInput htmlFor="start-date" text="Start Date" type="date" id="start-date" />
             <fieldset className="address">
                 <legend>Address</legend>
-
-                <label htmlFor="street">Street</label>
-                <input id="street" type="text" />
-
-                <label htmlFor="city">City</label>
-                <input id="city" type="text" />
-
+                <LabelInput htmlFor="street" text="Street" type="text" id="street" />
+                <LabelInput htmlFor="city" text="City" type="text" id="city" />
                 <label htmlFor="state">State</label>
                 <select name="state" id="state">
                     {states.map((state, index) => {
@@ -33,11 +21,8 @@ function Form() {
                         )
                     })}
                 </select>
-
-                <label htmlFor="zip-code">Zip Code</label>
-                <input id="zip-code" type="number" />
+                <LabelInput htmlFor="zip-code" text="Zip Code" type="number" id="zip-code" />
             </fieldset>
-
             <label htmlFor="department">Department</label>
             <select name="department" id="department">
                 <option>Sales</option>
